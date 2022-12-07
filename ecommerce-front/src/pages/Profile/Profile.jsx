@@ -88,7 +88,7 @@ const Profile = () => {
             <CardActions>
               {avatar === "" ? (
                 <Button
-                  onClick={(e) => handleCloudy(open)}
+                  onClick={() => handleCloudy(open)}
                   color='primary'
                   variant='outlined'
                 >
