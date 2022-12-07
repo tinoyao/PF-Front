@@ -33,7 +33,7 @@ const SubTitle = styled("p")({
 });
 
 export default function Users() {
-  const info = useSelector((state) => state.admin.orders);
+  const info = useSelector((state) => state.admin?.orders);
 
   const dispatch = useDispatch();
 
@@ -45,7 +45,7 @@ export default function Users() {
     <Container>
       <Link to={"/admin/orders"}>
         <Title>Ordenes</Title>
-        <UserNum>{info ? info.length : 0}</UserNum>
+        <UserNum>{info?.length}</UserNum>
         <SubTitle>Ver todos</SubTitle>
       </Link>
     </Container>
