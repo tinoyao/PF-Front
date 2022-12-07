@@ -7,6 +7,7 @@ import VentasTotales from "../../Components/VentasTotales/VentasTotales";
 import Orders from "./Orders";
 import Users from "./Users";
 import { getAllUsers } from "../../../../redux/actions/adminAction";
+import { useDispatch } from "react-redux";
 
 const Container = styled(Box)({
   marginLeft: "20px",
@@ -14,6 +15,8 @@ const Container = styled(Box)({
 });
 
 export default function Dashboard() {
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getAllUsers());
